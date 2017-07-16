@@ -27,7 +27,7 @@ return array(
     'DB_CHARSET'            =>  'utf8',      // 数据库编码默认采用utf8
     
     //修改模板引擎为smarty
-    'TMPL_ENGINE_TYPE'		=>  'Smarty', 
+//    'TMPL_ENGINE_TYPE'		=>  'Smarty',
     
     //多语言支持
     'LANG_SWITCH_ON'        => true,   // 默认关闭语言包功能

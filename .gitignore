@@ -12,6 +12,11 @@ nbproject
 # windows thumbnail cache
 Thumbs.db
 
+#
+shop/Runtime/*
+
+
+
 # composer vendor dir
 !/vendor
 
@@ -28,3 +33,4 @@ phpunit.phar
 
 tests/_output/*
 tests/_support/_generated
+
