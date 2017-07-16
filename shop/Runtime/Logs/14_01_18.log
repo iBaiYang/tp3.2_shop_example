@@ -1,0 +1,113 @@
+[ 2014-01-18T10:44:56+08:00 ] 127.0.0.1 /shop/index.php/Home/User/login
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000143s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000036s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000108s ]
+
+[ 2014-01-18T10:46:03+08:00 ] 127.0.0.1 /shop/index.php/Home/User/login
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000105s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000273s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000102s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000290s ]
+
+[ 2014-01-18T10:46:15+08:00 ] 127.0.0.1 /shop/index.php/Home/User/login
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000051s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000089s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000221s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000180s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000073s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000179s ]
+
+[ 2014-01-18T10:46:33+08:00 ] 127.0.0.1 /shop/index.php/Home/User/login
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000344s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000048s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000106s ]
+
+[ 2014-01-18T11:21:11+08:00 ] 127.0.0.1 /shop/index.php/Home/User/login
+ERR: 模板不存在:D:/web/1116/shop/Home/View/User/login.html
+
+[ 2014-01-18T11:22:00+08:00 ] 127.0.0.1 /shop/index.php/Home/User/login
+ERR: 模板不存在:D:/web/1116/shop/Home/View/User/login.html
+
+[ 2014-01-18T11:24:17+08:00 ] 127.0.0.1 /shop/index.php/Home/User/register
+ERR: 模板不存在:D:/web/1116/shop/Home/View/User/register.html
+
+[ 2014-01-18T11:25:36+08:00 ] 127.0.0.1 /shop/index.php/Home/Goods/showlist
+ERR: 模板不存在:D:/web/1116/shop/Home/View/Goods/showlist.html
+
+[ 2014-01-18T11:32:59+08:00 ] 127.0.0.1 /shop/index.php/Home/User/css/style.css
+ERR: 非法操作:css
+
+[ 2014-01-18T11:38:17+08:00 ] 127.0.0.1 /shop/index.php/Home/User/public/css/style.css
+ERR: 非法操作:public
+
+[ 2014-01-18T11:38:28+08:00 ] 127.0.0.1 /shop/index.php/Home/User/public/css/style.css
+ERR: 非法操作:public
+
+[ 2014-01-18T11:53:55+08:00 ] 127.0.0.1 /shop/index.php/Home/Goods/css/style.css
+ERR: 非法操作:css
+
+[ 2014-01-18T11:53:55+08:00 ] 127.0.0.1 /shop/index.php/Home/Goods/images/category.htm
+ERR: 非法操作:images
+
+[ 2014-01-18T11:56:08+08:00 ] 127.0.0.1 /shop/index.php/home/Goods/showlist
+ERR: 无法加载控制器:Goods
+
+[ 2014-01-18T11:57:15+08:00 ] 127.0.0.1 /shop/index.php/home/Goods/showlist
+ERR: 无法加载控制器:Goods
+
+[ 2014-01-18T13:40:39+08:00 ] 127.0.0.1 /shop/
+ERR: 无法加载控制器:CONTROLLER_NAME
+
+[ 2014-01-18T14:06:45+08:00 ] 127.0.0.1 /shop/index.php/Home/User/hello
+ERR: 非法操作:hello
+
+[ 2014-01-18T14:34:36+08:00 ] 127.0.0.1 /shop/index.php/Home/Tianjin/login
+ERR: 无法加载控制器:Tianjin
+
+[ 2014-01-18T15:06:12+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/index
+ERR: 无法加载控制器:Index
+
+[ 2014-01-18T15:25:48+08:00 ] 127.0.0.1 /shop/index.php/Admin/Manager/login
+ERR: 模板不存在:D:/web/1116/shop/Admin/View/Manager/login.html
+
+[ 2014-01-18T15:26:31+08:00 ] 127.0.0.1 /shop/index.php/Admin/Manager/css/User_Login.css
+ERR: 非法操作:css
+
+[ 2014-01-18T15:38:08+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/css/admin.css
+ERR: 非法操作:css
+
+[ 2014-01-18T16:27:01+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/css/mine.css
+ERR: 非法操作:css
+

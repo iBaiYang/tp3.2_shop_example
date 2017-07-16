@@ -1,0 +1,15 @@
+[ 2014-01-22T11:04:33+08:00 ] 127.0.0.1 /shop/index.php/Admin/Order/showlist
+ERR: 无法加载控制器:Order
+
+[ 2014-01-22T11:43:57+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/upd
+ERR: 参数错误或者未定义:goods_id
+
+[ 2014-01-22T14:39:20+08:00 ] 127.0.0.1 /shop/index.php/Admin/Role/distribute/role_id/1
+ERR: Syntax Error in template "D:/web/1116/shop/Admin/View\Role\distribute.html"  on line 8 "li{list-style: none;}"  - Unexpected ": ", expected one of: "}" , " "
+
+[ 2014-01-22T15:11:02+08:00 ] 127.0.0.1 /shop/index.php/Admin/Role/distribute/role_id/1
+ERR: Syntax Error in template "D:/web/1116/shop/Admin/View\Role\distribute.html"  on line 32 "&lt;li&gt;{$v.auth_name}&lt;input type=&quot;checkbox&quot; name=&quot;authname[]&quot; value=&quot;{$v.auth_id}&quot; {if(in_array($v.auth_id,$auth_ids_arr))}checked='checked'{/if} /&gt;" unknown function "if"
+
+[ 2014-01-22T15:11:44+08:00 ] 127.0.0.1 /shop/index.php/Admin/Role/distribute/role_id/2
+ERR: Syntax Error in template "D:/web/1116/shop/Admin/View\Role\distribute.html"  on line 32 "&lt;li&gt;{$v.auth_name}&lt;input type=&quot;checkbox&quot; name=&quot;authname[]&quot; value=&quot;{$v.auth_id}&quot; {if(in_array($auth_ids_arr,$v.auth_id))}checked='checked'{/if} /&gt;" unknown function "if"
+

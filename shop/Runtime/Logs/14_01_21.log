@@ -1,0 +1,6 @@
+[ 2014-01-21T09:38:30+08:00 ] 127.0.0.1 /shop/index.php/Home/User/register
+ERR: Unable to load template file '6\ThinkPHP/Tpl/dispatch_jump.tpl'
+
+[ 2014-01-21T11:48:37+08:00 ] 127.0.0.1 /shop/index.php/Admin/Manager/User_Login.css
+ERR: 非法操作:User_Login.css
+

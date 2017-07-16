@@ -1,0 +1,108 @@
+[ 2014-01-20T10:43:56+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/showlist
+ERR: Syntax Error in template "D:/web/1116/shop/Admin/View\Goods\showlist.html"  on line 12 ".tr_color{background-color: #9F88FF}"  - Unexpected ": ", expected one of: "}" , " "
+
+[ 2014-01-20T10:44:29+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2014-01-20T10:46:07+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2014-01-20T14:56:26+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2014-01-20T14:57:40+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2014-01-20T14:58:17+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2014-01-20T14:59:28+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2014-01-20T15:05:32+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2014-01-20T15:05:54+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2014-01-20T15:23:03+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2014-01-20T15:43:43+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/add
+ERR: Unable to load template file '6\ThinkPHP/Tpl/dispatch_jump.tpl'
+
+[ 2014-01-20T15:58:34+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2014-01-20T15:59:18+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2014-01-20T16:00:20+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2014-01-20T16:00:53+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2014-01-20T16:24:20+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/add
+ERR: 模板不存在:D:/web/1116/shop//View/Goods/add.html
+
+[ 2014-01-20T16:24:41+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/add
+ERR: 模板不存在:D:/web/1116/shop//View/Goods/add.html
+
+[ 2014-01-20T16:32:30+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2014-01-20T16:35:32+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/__CONTROLLER__/head
+ERR: 非法操作:__CONTROLLER__
+
+[ 2014-01-20T16:35:32+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/__CONTROLLER__/left
+ERR: 非法操作:__CONTROLLER__
+
+[ 2014-01-20T16:35:32+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/__CONTROLLER__/right
+ERR: 非法操作:__CONTROLLER__
+
+[ 2014-01-20T16:36:06+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/admin.css
+ERR: 非法操作:admin.css
+
+[ 2014-01-20T16:36:06+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/admin.css
+ERR: 非法操作:admin.css
+
+[ 2014-01-20T16:36:06+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/admin.css
+ERR: 非法操作:admin.css
+
+[ 2014-01-20T16:36:28+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/admin.css
+ERR: 非法操作:admin.css
+
+[ 2014-01-20T16:36:40+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/__MODULE__/Goods/showlist
+ERR: 非法操作:__MODULE__
+
+[ 2014-01-20T16:37:08+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/__MODULE__/Goods/showlist
+ERR: 非法操作:__MODULE__
+
+[ 2014-01-20T16:37:18+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/__MODULE__/Goods/showlist
+ERR: 非法操作:__MODULE__
+
+[ 2014-01-20T16:37:54+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/__MODULE__/Goods/showlist
+ERR: 非法操作:__MODULE__
+
+[ 2014-01-20T16:38:56+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/__MODULE__/Goods/showlist
+ERR: 非法操作:__MODULE__
+
+[ 2014-01-20T16:38:57+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/__MODULE__/Goods/showlist
+ERR: 非法操作:__MODULE__
+
+[ 2014-01-20T16:38:57+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/__MODULE__/Goods/showlist
+ERR: 非法操作:__MODULE__
+
+[ 2014-01-20T16:38:57+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/__MODULE__/Goods/showlist
+ERR: 非法操作:__MODULE__
+
+[ 2014-01-20T16:38:58+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/__MODULE__/Goods/showlist
+ERR: 非法操作:__MODULE__
+
+[ 2014-01-20T16:38:58+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/__MODULE__/Goods/showlist
+ERR: 非法操作:__MODULE__
+
+[ 2014-01-20T16:53:25+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/upd/age/30
+ERR: 参数错误或者未定义:goods_id
+
