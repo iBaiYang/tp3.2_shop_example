@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv=content-type content="text/html; charset=utf-8" />
-    <link href="{$smarty.const.ADMIN_CSS_URL}admin.css" type="text/css" rel="stylesheet" />
+    <link href="{$Think.const.ADMIN_CSS_URL}admin.css" type="text/css" rel="stylesheet" />
     <script language=javascript>
         function expand(el)
         {
@@ -21,39 +21,39 @@
     </script>
 </head>
 <body>
-<table height="100%" cellspacing=0 cellpadding=0 width=170 background={$smarty.const.ADMIN_IMG_URL}menu_bg.jpg border=0>
+<table height="100%" cellspacing=0 cellpadding=0 width=170 background={$Think.const.ADMIN_IMG_URL}menu_bg.jpg border=0>
     <tr>
         <td valign=top align=middle>
             <table cellspacing=0 cellpadding=0 width="100%" border=0>
                 <tr><td height=10></td></tr>
             </table>
-            {foreach $pauth_info as $k => $v}
+            <foreach name="pauth_info" item="v" key="k">
                 <table cellspacing=0 cellpadding=0 width=150 border=0>
                     <tr height=22>
-                        <td style="padding-left: 30px" background={$smarty.const.ADMIN_IMG_URL}menu_bt.jpg>
+                        <td style="padding-left: 30px" background={$Think.const.ADMIN_IMG_URL}menu_bt.jpg>
                             <a class=menuparent onclick=expand({$v.auth_id}) href="javascript:void(0);">{$v.auth_name}</a>
                         </td>
                     </tr>
                     <tr height=4><td></td></tr>
                 </table>
                 <table id=child{$v.auth_id} style="display: none" cellspacing=0 cellpadding=0 width=150 border=0>
-                    {foreach $sauth_info as $kk => $vv}
-                        {*当前父级id与外边的id一致，才显示*}
-                        {if $vv.auth_pid == $v.auth_id}
+                    <foreach name="sauth_info" item="vv" key="kk">
+                        <!--{*当前父级id与外边的id一致，才显示*}-->
+                        <if condition="$vv['auth_pid'] eq $v['auth_id']">
                             <tr height=20>
                                 <td align=middle width=30>
-                                   <img height=9 src="{$smarty.const.ADMIN_IMG_URL}menu_icon.gif" width=9>
+                                    <img height=9 src="{$Think.const.ADMIN_IMG_URL}menu_icon.gif" width=9>
                                 </td>
                                 <td>
-                                   <a class="menuchild" href="{$smarty.const.__MODULE__}/{$vv.auth_c}/{$vv.auth_a}" target="right">
-                                       {$vv.auth_name}
-                                   </a>
+                                    <a class="menuchild" href="__MODULE__/{$vv.auth_c}/{$vv.auth_a}" target="right">
+                                        {$vv.auth_name}
+                                    </a>
                                 </td>
                             </tr>
-                        {/if}
-                    {/foreach}
+                        </if>
+                    </foreach>
                 </table>
-            {/foreach}
+            </foreach>
         </td>
         <td width=1 bgcolor=#d1e6f7></td>
     </tr>

@@ -1,15 +1,19 @@
 <?php
-
 namespace Admin\Controller;
+
 use Component\AdminController;
 
-class AuthController extends AdminController{
-    function showlist(){
+class AuthController extends AdminController
+{
+    function showlist()
+    {
         $info = $this -> getInfo();
         $this -> assign('info', $info);
         $this -> display();
     }
-    function add(){
+
+    function add()
+    {
         if(!empty($_POST)){
             //在AuthModel里边通过一个指定方法实现权限添加
             $auth = new \Model\AuthModel();
@@ -35,7 +39,8 @@ class AuthController extends AdminController{
         }
     }
     
-    function getInfo($flag=false){
+    function getInfo( $flag=false )
+    {
         //如果$flag标志为false，查询全部的权限信息
         //如果$flag标志为true,只查询level=0/1的权限信息
         $auth = D('Auth');
@@ -45,7 +50,8 @@ class AuthController extends AdminController{
         $info = D('Auth')->order('auth_path asc')->select();
         }
         //$info[X][auth_name] = "->"auth_name
-        foreach($info as $k => $v){
+        foreach( $info as $k => $v )
+        {
             $info[$k]['auth_name'] = str_repeat('-->',$v['auth_level']).$info[$k]['auth_name'];
         }
         return $info;

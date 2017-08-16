@@ -1,12 +1,18 @@
 <?php
-
-//后台商品控制器
 namespace Admin\Controller;
+
 use Component\AdminController;
 
-class GoodsController extends AdminController {
+/**
+ * 后台商品控制器
+ * Class GoodsController
+ * @package Admin\Controller
+ */
+class GoodsController extends AdminController
+{
     //商品列表展示
-    function showlist1(){
+    function showlist1()
+    {
         //使用数据model模型
         //实例化model对象
         //$goods = new \Model\GoodsModel();  //object(Model\GoodsModel)
@@ -20,21 +26,22 @@ class GoodsController extends AdminController {
         show_bug($goods);
         
         
-        $this -> display();
+        $this->display();
     }
     
-    function showlist2(){
+    function showlist2()
+    {
         $goods = D('Goods');
         
         //$info = $goods ->table("sw_user")-> select();
         //show_bug($info);
         
-        $info = $goods -> select();//获得数据信息
+        $info = $goods->select();//获得数据信息
         //把数据assign到模板
         //价格大于1000元的商品
         //where(内部$this,return $this)
         //$('div').css('color','red').css('font-size','30px')
-        $info = $goods -> where("goods_price > 1000 and goods_name like '索%'")->select();
+        $info = $goods->where("goods_price > 1000 and goods_name like '索%'")->select();
         //查询指定的字段
         $info = $goods->field("goods_id,goods_name")->select();
         //限制条数
@@ -47,38 +54,44 @@ class GoodsController extends AdminController {
         //      每个分组下边商品的价格算术和是多少
         //      select category_id,sum(price) from table group by category_id
         //$info = $goods->field('goods_category_id')->select(); //有重复的
-        $info = $goods ->field('goods_category_id')-> group('goods_category_id')->select();
+        $info = $goods->field('goods_category_id')->group('goods_category_id')->select();
         //show_bug($info);
         //排序显示结果order by goods_price desc
-        $info = $goods ->order('goods_price asc')-> select();
+        $info = $goods->order('goods_price asc')->select();
         
-        $this -> assign('info', $info);
+        $this->assign('info', $info);
         
-        $this -> display();
+        $this->display();
     }
     
-    function showlist(){
-        
+    function showlist()
+    {
         $goods = D("Goods");
         
         //1. 获得当前记录总条数
-        $total = $goods -> count();
-        $per = 7;
+        $total = $goods->count();
+        $per = 5;
         //2. 实例化分页类对象
         $page = new \Component\Page($total, $per); //autoload
         //3. 拼装sql语句获得每页信息
         $sql = "select * from sw_goods ".$page->limit;
-        $info = $goods -> query($sql);
+        $info = $goods->query($sql);
         //4. 获得页码列表
-        $pagelist = $page -> fpage();
+        $pagelist = $page->fpage();
         
-        $this -> assign('info', $info);
-        $this -> assign('pagelist', $pagelist);
-        $this -> display();
+        $this->assign('info', $info);
+        $this->assign('pagelist', $pagelist);
+
+        if ( !empty(C('TMPL_ENGINE_TYPE')) ) {
+            $this->display( C('TMPL_ENGINE_TYPE')."_showlist" );
+        } else {
+            $this->display();
+        }
     }
     
     //添加商品
-    function add1(){
+    function add1()
+    {
         //利用数组方式实现数据添加
         $goods = D("Goods");
         $ar = array(
@@ -90,22 +103,23 @@ class GoodsController extends AdminController {
         
         //利用AR实现数据添加
         $goods = D("Goods");
-        $goods -> goods_name = "htc_one";
-        $goods -> goods_price = 3000;
-        $rst = $goods -> add();
+        $goods->goods_name = "htc_one";
+        $goods->goods_price = 3000;
+        $rst = $goods->add();
         
-        if($rst > 0){
+        if ( $rst > 0 ) {
             echo "success";
         } else {
             echo "failure";
         }
         
-        $this -> display();
+        $this->display();
     }
     
-    function add(){
+    function add()
+    {
         $goods = D("Goods");
-        if(!empty($_POST)){
+        if ( !empty($_POST) ) {
             //判断附件是否有上传
             //如果有则实例化Upload，把附件上传到服务器指定位置
             //然后把附件的路径名获得到，存入$_POST
@@ -117,7 +131,7 @@ class GoodsController extends AdminController {
                 //附件被上传到路径：根目录/保存目录路径/创建日期目录
                 $upload = new \Think\Upload($config);
                 //uploadOne会返回已经上传的附件信息
-                $z = $upload -> uploadOne($_FILES['goods_img']);
+                $z = $upload->uploadOne($_FILES['goods_img']);
                 if(!$z){
                     show_bug($upload->getError()); //获得上传附件产生的错误信息
                 }else {
@@ -137,8 +151,8 @@ class GoodsController extends AdminController {
                 }
             }
             
-            $goods -> create(); //收集post表单数据
-            $z = $goods -> add();
+            $goods->create(); //收集post表单数据
+            $z = $goods->add();
             if($z){
                 //$this ->success('添加商品成功', U('Goods/showlist'));
                 echo "success";
@@ -146,12 +160,15 @@ class GoodsController extends AdminController {
                 //$this ->error('添加商品失败', U('Goods/showlist'));
                 echo "error";
             }
-        }else {
+        } else {
+
         }
         $this -> display();
     }
+
     //修改商品
-    function upd1(){
+    function upd1()
+    {
         
         $goods = D("Goods");
         $ar = array(
@@ -163,7 +180,8 @@ class GoodsController extends AdminController {
         $this -> display();
     }
     
-    function upd($goods_id){
+    function upd( $goods_id )
+    {
         //查询被修改商品的信息并传递给模板展示
         $goods = D("Goods");
         //两个逻辑：展示表单、收集表单
@@ -183,7 +201,8 @@ class GoodsController extends AdminController {
     }
     
     //删除方法
-    function del(){
+    function del()
+    {
         $goods = D("Goods");
         //以下三种方式都可以删除数据
         $rst = $goods -> delete(63);
@@ -193,12 +212,14 @@ class GoodsController extends AdminController {
         show_bug($rst);
     }
     
-    function getMoney(){
+    function getMoney()
+    {
         return "1000元钱";
     }
     
     //设置缓存
-    function s1(){
+    function s1()
+    {
         S('name','tom',10);
         S('age',25);
         S('addr','北京');
@@ -207,23 +228,28 @@ class GoodsController extends AdminController {
     }
     
     //读取缓存数据
-    function s2(){
+    function s2()
+    {
         echo S('name'),"<br />";
         echo S('age'),"<br />";
         echo S('addr'),"<br />";
         print_r(S('hobby'));echo "<br />";
     }
     
-    function s3(){
+    function s3()
+    {
         //S('age',null);
         echo "delete";
     }
     
-    function y1(){
+    function y1()
+    {
         //外部用户访问的方法
         show_bug($this -> y2());
     }
-    function y2(){
+
+    function y2()
+    {
         //被其他方法调用的方法，获得指定信息
         //第一次从数据库获得，后续在有效期从缓存里边获得
         $info = S('goods_info');

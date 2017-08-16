@@ -3,10 +3,16 @@
 namespace Admin\Controller;
 use Component\AdminController;
 
-//角色控制器
-class RoleController extends AdminController{
+/**
+ * 角色控制器
+ * Class RoleController
+ * @package Admin\Controller
+ */
+class RoleController extends AdminController
+{
     //显示角色列表
-    function showlist(){
+    function showlist()
+    {
         $info = D()->table('sw_role')->select();
         //$info = D('sw_role')->select();
         $this -> assign('info',$info);

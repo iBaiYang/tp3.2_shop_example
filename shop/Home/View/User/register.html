@@ -8,12 +8,12 @@
 
         <title>YONGDA商城 - Powered by YongDa</title>
 
-        <link href="{$smarty.const.CSS_URL}style.css" rel="stylesheet" type="text/css" />
+        <link href="{$Think.const.CSS_URL}style.css" rel="stylesheet" type="text/css" />
 
     </head>
     <body class="index_body">
         <div class="block clearfix" style="position: relative; height: 98px;">
-            <a href="#" name="top"><img class="logo" src="{$smarty.const.IMG_URL}logo.gif"></a>
+            <a href="#" name="top"><img class="logo" src="{$Think.const.IMG_URL}logo.gif"></a>
 
             <div id="topNav" class="clearfix">
                 <div style="float: left;"> 
@@ -21,8 +21,8 @@
 
                         <div id="append_parent"></div>
                         欢迎光临本店&nbsp;
-                        <a href="./index.php?r=user/login"> 登录</a>
-                        <a href="./index.php?r=user/register">注册</a>
+                        <a href="{:U('User/login')}"> 登录</a>
+                        <a href="{:U('User/register')}">注册</a>
                     </font>
                 </div>
                 <div style="float: right;">
@@ -55,32 +55,32 @@
             <form id="searchForm" method="get" action="#">
                 <input name="keywords" id="keyword" type="text" />
 
-                <input name="imageField" value=" " class="go" style="cursor: pointer; background: url('{$smarty.const.IMG_URL}sousuo.gif') no-repeat scroll 0% 0% transparent; width: 39px; height: 20px; border: medium none; float: left; margin-right: 15px; vertical-align: middle;" type="submit" />
+                <input name="imageField" value=" " class="go" style="cursor: pointer; background: url('{$Think.const.IMG_URL}sousuo.gif') no-repeat scroll 0% 0% transparent; width: 39px; height: 20px; border: medium none; float: left; margin-right: 15px; vertical-align: middle;" type="submit" />
 
             </form>
         </div>
         <div class="blank5"></div>
         <div class="header_bg_b">
             <div class="f_l" style="padding-left: 10px;">
-                <img src="{$smarty.const.IMG_URL}biao6.gif" />
+                <img src="{$Think.const.IMG_URL}biao6.gif" />
                 北京市区，现在下单(截至次日00:30已出库)，<b>明天上午(9-14点)</b>送达 <b>免运费火热进行中！</b>
 
             </div>
             <div class="f_r" style="padding-right: 10px;">
-                <img style="vertical-align: middle;" src="{$smarty.const.IMG_URL}biao3.gif">
+                <img style="vertical-align: middle;" src="{$Think.const.IMG_URL}biao3.gif">
                     <span class="cart" id="ECS_CARTINFO">
                         <a href="#" title="查看购物车">您的购物车中有 0 件商品，总计金额 ￥0.00元。</a></span>
-                    <a href="#"><img style="vertical-align: middle;" src="{$smarty.const.IMG_URL}biao7.gif"></a>
+                    <a href="#"><img style="vertical-align: middle;" src="{$Think.const.IMG_URL}biao7.gif"></a>
 
             </div>
         </div>
 
-        <div class="block block1">  
+        <div class="block block1">
 
             <div class="block box">
                 <div class="blank"></div>
                 <div id="ur_here">
-                    当前位置: <a href="#">首页</a> <code>&gt;</code> 用户注册 
+                    当前位置: <a href="#">首页</a> <code>&gt;</code> 用户注册
                 </div>
             </div>
             <div class="blank"></div>
@@ -93,16 +93,16 @@
                 <div class="usBox">
                     <div class="usBox_2 clearfix">
                         <div class="logtitle3"></div>
-                        <form id="yw0" action="{$smarty.const.__SELF__}" method="post">                
+                        <form id="yw0" action="__SELF__" method="post">
                             <table cellpadding="5" cellspacing="3" style="text-align:left; width:100%; border:0;">
                                 <tbody>
                                     <tr>
-                                        <td style="width:13%; text-align: right;"><label for="User_username" class="required">用户名 
+                                        <td style="width:13%; text-align: right;"><label for="User_username" class="required">用户名
                                         <span class="required">*</span></label>
                                         </td>
 
                                         <td style="width:87%;">
-                                            <input class="inputBg" size="25" name="username" id="User_username" type="text" value="" />                  
+                                            <input class="inputBg" size="25" name="username" id="User_username" type="text" value="" />
                                             <span style="color:red;">用户名已经存在</span>
                                         </td>
                                     </tr>
@@ -112,7 +112,7 @@
                                         </td>
 
                                         <td>
-                                            <input class="inputBg" size="25" name="password" id="User_password" type="password" value="" />         
+                                            <input class="inputBg" size="25" name="password" id="User_password" type="password" value="" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -125,7 +125,7 @@
                                     <tr>
                                         <td align="right"><label for="User_user_email">邮箱</label></td>
                                         <td>
-                                            <input class="inputBg" size="25" name="user_email" id="User_user_email" type="text" value="" />    
+                                            <input class="inputBg" size="25" name="user_email" id="User_user_email" type="text" value="" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -147,12 +147,12 @@
                                         <td>
 
                                             <span id="User_user_sex">
-                                            <input id="User_user_sex_0" value="1" checked="checked" type="radio" name="user_sex" /> 
+                                            <input id="User_user_sex_0" value="1" checked="checked" type="radio" name="user_sex" />
                                             <label for="User_user_sex_0">男</label>&nbsp;
-                                            <input id="User_user_sex_1" value="2" type="radio" name="user_sex" /> 
+                                            <input id="User_user_sex_1" value="2" type="radio" name="user_sex" />
                                             <label for="User_user_sex_1">女</label>&nbsp;
-                                            <input id="User_user_sex_2" value="3" type="radio" name="user_sex" /> 
-                                            <label for="User_user_sex_2">保密</label></span>                                
+                                            <input id="User_user_sex_2" value="3" type="radio" name="user_sex" />
+                                            <label for="User_user_sex_2">保密</label></span>
                                         </td>
                                     </tr>
                                     <tr>
@@ -175,22 +175,22 @@
                                         <td>
 
                                             <span id="User_user_hobby">
-                                            <input id="User_user_hobby_0" value="1" type="checkbox" name="user_hobby[]" /> 
+                                            <input id="User_user_hobby_0" value="1" type="checkbox" name="user_hobby[]" />
                                             <label for="User_user_hobby_0">篮球</label>&nbsp;
-                                            <input id="User_user_hobby_1" value="2" type="checkbox" name="user_hobby[]" /> 
+                                            <input id="User_user_hobby_1" value="2" type="checkbox" name="user_hobby[]" />
                                             <label for="User_user_hobby_1">足球</label>&nbsp;
-                                            <input id="User_user_hobby_2" value="3" type="checkbox" name="user_hobby[]" /> 
+                                            <input id="User_user_hobby_2" value="3" type="checkbox" name="user_hobby[]" />
                                             <label for="User_user_hobby_2">排球</label>&nbsp;
-                                            <input id="User_user_hobby_3" value="4" type="checkbox" name="user_hobby[]" /> 
+                                            <input id="User_user_hobby_3" value="4" type="checkbox" name="user_hobby[]" />
                                             <label for="User_user_hobby_3">棒球</label>
-                                            </span>                                
+                                            </span>
                                         </td>
                                     </tr>
                                     <tr>
 
                                         <td align="right"><label for="User_user_introduce">简介</label></td>
                                         <td>
-                                            <textarea cols="50" rows="5" name="user_introduce" id="User_user_introduce"></textarea>                      
+                                            <textarea cols="50" rows="5" name="user_introduce" id="User_user_introduce"></textarea>
                                         </td>
                                     </tr>
                                     <tr>
@@ -215,7 +215,7 @@
 
         <div class="blank"></div>
         <div class="block">
-            <a href="#" target="_blank" title="YONGDA商城"><img alt="YONGDA商城" src="{$smarty.const.IMG_URL}di.jpg"></a>
+            <a href="#" target="_blank" title="YONGDA商城"><img alt="YONGDA商城" src="{$Think.const.IMG_URL}di.jpg"></a>
             <div class="blank"></div>
         </div>
 
@@ -271,11 +271,11 @@
         <div class="blank"></div>
         <div id="bottomNav" class="box block">
             <div class="box_1">
-                <div class="links clearfix"> 
-                    <a href="#" target="_blank" title="YONGDA商城"><img src="{$smarty.const.IMG_URL}ecmoban_link.jpg" alt="YONGDA商城" border="0"></a>
+                <div class="links clearfix">
+                    <a href="#" target="_blank" title="YONGDA商城"><img src="{$Think.const.IMG_URL}ecmoban_link.jpg" alt="YONGDA商城" border="0"></a>
 
                     <a href="#" target="_blank" title="YONGDA 网上商店管理系统">
-                        <img src="{$smarty.const.IMG_URL}yongda_logo.gif" alt="YONGDA 网上商店管理系统" border="0" />
+                        <img src="{$Think.const.IMG_URL}yongda_logo.gif" alt="YONGDA 网上商店管理系统" border="0" />
                     </a>
 
 

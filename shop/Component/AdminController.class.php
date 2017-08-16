@@ -18,7 +18,7 @@ class AdminController extends Controller
 
         // 判断是否登录
         if ( empty(session('mg_id')) ) {
-            $this -> error('请先登录', U("Manager/login"));
+            $this->error('请先登录', U("Manager/login"));
         }
         
         
@@ -39,8 +39,8 @@ class AdminController extends Controller
         //默认以下权限没有限制
         //Index/left  Index/right  Index/head  Index/index  Manager/login
         $allow_ac = array('Index-left','Index-right','Index-head','Index-index','Manager-login');
-        if(!in_array($now_ac,$allow_ac) && $_SESSION['mg_id'] !=1 && strpos($auth_ac,$now_ac) === false){
-            $this -> error('没有权限访问', U("Index/right"));
+        if ( !in_array($now_ac, $allow_ac) && $_SESSION['mg_id'] !=1 && strpos($auth_ac, $now_ac) === false ) {
+            $this->error('没有权限访问', U("Index/right"));
         }
     }
 }

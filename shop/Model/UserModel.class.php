@@ -7,7 +7,8 @@ use Think\Model;
 
 //父类Model  ThinkPHP/Library/Think/Model.class.php
 
-class UserModel extends Model{
+class UserModel extends Model
+{
     
     //一次性获得全部验证错误
     protected $patchValidate    =   true;
@@ -43,7 +44,8 @@ class UserModel extends Model{
     //自定义方法验证爱好信息
     //$name参数是当前被验证项目的信息
     //$name = $_POST['user_hobby']
-    function check_hobby($name){
+    function check_hobby( $name )
+    {
         if(count($name)<2){
             return false;
         } else {

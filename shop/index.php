@@ -1,15 +1,9 @@
 <?php
 header("content-type:text/html;charset=utf-8");
 
-//制作一个输出调试函数
-function show_bug($msg){
-    echo "<pre style='color:red'>";
-    var_dump($msg);
-    echo "</pre>";
-}
-
 //定义css、img、js常量
-define("SITE_URL","http://itcast.host/");
+define("SITE_URL","http://tp32shop.host/");
+
 define("CSS_URL",SITE_URL."public/Home/css/"); //css
 define("IMG_URL",SITE_URL."public/Home/img/"); //img
 define("JS_URL",SITE_URL."public/Home/js/"); //js

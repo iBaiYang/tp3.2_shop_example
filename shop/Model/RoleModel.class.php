@@ -3,7 +3,8 @@
 namespace Model;
 use Think\Model;
 
-class RoleModel extends Model{
+class RoleModel extends Model
+{
     //权限分配
     //$auth是一维数组信息，给单前角色分配的权限id信息
     function saveAuth($auth,$role_id){

@@ -1,6 +1,6 @@
 <?php
-
 namespace Model;
+
 use Think\Model;
 
 class ManagerModel extends Model
@@ -19,7 +19,7 @@ class ManagerModel extends Model
         //根据指定字段进行查询getByXXX();  getByMg_name($name);
         //getBymg_pwd();  父类Model利用__call()封装的方法
         //getByXXX()函数返回一维数组信息
-        $info = $this -> getByMg_name( $name );
+        $info = $this->getByMg_name( $name );
         //$info =null  说明用户名错误
         //$info = 一维数组  用户名正确
         

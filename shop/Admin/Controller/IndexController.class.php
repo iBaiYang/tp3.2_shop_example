@@ -1,8 +1,8 @@
 <?php
-
 //后台首页控制器
 //商品控制器
 namespace Admin\Controller;
+
 use Component\AdminController;
 
 /**
@@ -17,7 +17,11 @@ class IndexController extends AdminController
      */
     public function index ()
     {
-        $this -> display();
+        if ( !empty(C('TMPL_ENGINE_TYPE')) ) {
+            $this->display( C('TMPL_ENGINE_TYPE')."_index" );
+        } else {
+            $this->display();
+        }
     }
 
     /**
@@ -29,8 +33,12 @@ class IndexController extends AdminController
         //get_defined_constants([true])
         //true参数会把常量进行自动分组显示
 //        var_dump(get_defined_constants(true));
-        
-        $this -> display();
+
+        if ( !empty(C('TMPL_ENGINE_TYPE')) ) {
+            $this->display( C('TMPL_ENGINE_TYPE')."_head" );
+        } else {
+            $this->display();
+        }
     }
 
     /**
@@ -64,7 +72,12 @@ class IndexController extends AdminController
         
         $this -> assign('pauth_info',$p_info);
         $this -> assign('sauth_info',$s_info);
-        $this -> display();
+
+        if ( !empty(C('TMPL_ENGINE_TYPE')) ) {
+            $this->display( C('TMPL_ENGINE_TYPE')."_left" );
+        } else {
+            $this->display();
+        }
     }
 
     /**
@@ -72,7 +85,11 @@ class IndexController extends AdminController
      */
     public function right ()
     {
-        $this -> display();
+        if ( !empty(C('TMPL_ENGINE_TYPE')) ) {
+            $this->display( C('TMPL_ENGINE_TYPE')."_right" );
+        } else {
+            $this->display();
+        }
     }
     
 }

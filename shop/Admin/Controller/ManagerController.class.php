@@ -14,8 +14,13 @@ class ManagerController extends Controller
     {
         if ( empty($_POST) ) {
             # 登录页面
-            $this -> assign('lang',L());
-            $this -> display();
+            $this->assign('lang',L());
+
+            if ( !empty(C('TMPL_ENGINE_TYPE')) ) {
+                $this->display( C('TMPL_ENGINE_TYPE')."_login" );
+            } else {
+                $this->display();
+            }
         } else {
             # 登录验证
             // 验证码校验
@@ -119,7 +124,8 @@ class ManagerController extends Controller
         $rrinfo = D("Role")->select(); //二维数组信息
         //array(1=>'经理',2=>'主管',3=>'总监')
         $rinfo = array();
-        foreach($rrinfo as $k => $v){
+        foreach($rrinfo as $k => $v)
+        {
             $rinfo[$v['role_id']] = $v['role_name'];//array(1=>'经理',2=>'主管')
         }
         return $rinfo;

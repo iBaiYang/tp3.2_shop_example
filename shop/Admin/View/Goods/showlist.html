@@ -3,9 +3,9 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
-        <title>会员列表</title>
+        <title>商品列表</title>
 
-        <link href="{$smarty.const.ADMIN_CSS_URL}mine.css" type="text/css" rel="stylesheet" />
+        <link href="{$Think.const.ADMIN_CSS_URL}mine.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
         <style>
@@ -17,7 +17,7 @@
             <span>
                 <span style="float: left;">当前位置是：商品管理-》商品列表</span>
                 <span style="float: right; margin-right: 8px; font-weight: bold;">
-                    <a style="text-decoration: none;" href="{$smarty.const.__MODULE__}/Goods/add">【添加商品】</a>
+                    <a style="text-decoration: none;" href="__MODULE__/Goods/add">【添加商品】</a>
                 </span>
             </span>
         </div>
@@ -37,7 +37,8 @@
 
         <div style="font-size: 13px; margin: 10px 5px;">
             <table class="table_a" border="1" width="100%">
-                <tbody><tr style="font-weight: bold;">
+                <tbody>
+                    <tr style="font-weight: bold;">
                         <td>序号</td>
                         <td>商品名称</td>
                         <td>库存</td>
@@ -48,20 +49,20 @@
                         <td>创建时间</td>
                         <td align="center">操作</td>
                     </tr>
-                    {foreach $info as $k => $v}
-                    <tr id="product1">
-                        <td>{$v.goods_id}</td>
-                        <td><a href="#">{$v.goods_name}</a></td>
-                        <td>{$v.goods_number}</td>
-                        <td>{$v.goods_price}</td>
-                        <td><img src="{$smarty.const.IMG_UPLOAD}{$v.goods_big_img}" height="60" width="60"></td>
-                        <td><img src="{$smarty.const.ADMIN_IMG_URL}{$v.goods_small_img}" height="40" width="40"></td>
-                        <td>苹果apple</td>
-                        <td>{$v.goods_create_time}</td>
-                        <td><a href="{$smarty.const.__MODULE__}/Goods/upd/goods_id/{$v.goods_id}">修改</a></td>
-                        <td><a href="javascript:;" onclick="delete_product(1)">删除</a></td>
-                    </tr>
-                    {/foreach}
+                    <foreach name="info" item="v" key="k">
+                        <tr id="product1">
+                            <td>{$v.goods_id}</td>
+                            <td><a href="#">{$v.goods_name}</a></td>
+                            <td>{$v.goods_number}</td>
+                            <td>{$v.goods_price}</td>
+                            <td><img src="{$Think.const.IMG_UPLOAD}{$v.goods_big_img}" height="60" width="60"></td>
+                            <td><img src="{$Think.const.ADMIN_IMG_URL}{$v.goods_small_img}" height="40" width="40"></td>
+                            <td>苹果apple</td>
+                            <td>{$v.goods_create_time}</td>
+                            <td><a href="__MODULE__/Goods/upd/goods_id/{$v.goods_id}">修改</a></td>
+                            <td><a href="javascript:;" onclick="delete_product(1)">删除</a></td>
+                        </tr>
+                    </foreach>
                     <tr>
                         <td colspan="20" style="text-align: center;">
                             {$pagelist}
