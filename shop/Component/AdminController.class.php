@@ -1,9 +1,13 @@
 <?php
-
-//普通控制器的父类
 namespace Component;
+
 use Think\Controller;
 
+/**
+ * Admin模块组件
+ * Class AdminController
+ * @package Component
+ */
 class AdminController extends Controller
 {
     /**
